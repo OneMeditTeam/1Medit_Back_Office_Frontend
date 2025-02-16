@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Nanum_Gothic } from "next/font/google";
 import "./globals.css";
+import LeftNavigationBar from "@/components/common/LeftNavigationBar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const nanumGothic = Nanum_Gothic({
+  weight: ["400", "700"],
+  variable: "--font-nanum-gothic",
   subsets: ["latin"],
 });
 
@@ -24,10 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${nanumGothic.variable} antialiased font-nanum`}>
+        <div className="flex h-screen">
+          <LeftNavigationBar />
+          <div className="flex-1 h-screen shadow-lg rounded-xl p-6">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
