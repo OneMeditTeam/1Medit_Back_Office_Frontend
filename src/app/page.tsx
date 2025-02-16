@@ -1,4 +1,3 @@
-import LeftNavigationBar from "@/components/common/LeftNavigationBar";
 import Loading from "@/components/common/Loading";
 import Dashboard from "@/app/dashboard/page";
 import { Suspense } from "react";
