@@ -1,7 +1,0 @@
-version: 2
-updates:
-  - package-ecosystem: "npm"  # Node.js 프로젝트 (Flutter이면 "pub" 사용)
-    directory: "/"  # 루트 디렉터리
-    schedule:
-      interval: "daily"  # 매일 업데이트 확인
-    open-pull-requests-limit: 5  # 한 번에 최대 5개의 PR 생성
