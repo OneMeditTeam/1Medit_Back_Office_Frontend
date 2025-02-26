@@ -1,20 +1,28 @@
 ---
-name: Feature request
-about: 기능 추가 이슈 템플릿
-title: ''
-labels: ''
+name: "\U0001F6E0Feature Template"
+about: 기능 개발을 위한 이슈 템플릿입니다.
+title: "[Feat] 이슈 내용"
+labels: feat
 assignees: ''
 
 ---
 
-## 어떤 기능인가요?
+### 목적
+> 추가하려는 기능 등에 대해 간결하게 설명해주세요
 
-> 추가하려는 기능에 대해 간결하게 설명해주세요
+<br />
 
-## 작업 상세 내용
-
+### 작업 상세 내용
 - [ ] TODO
 - [ ] TODO
-- [ ] TODO
 
-## 참고할만한 자료(선택)
+<br />
+
+### 유의사항
+
+<br />
+
+### 유의사항
+
+<br />
+
