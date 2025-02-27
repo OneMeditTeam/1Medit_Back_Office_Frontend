@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 import {
   Table,
   TableBody,
@@ -8,21 +8,21 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+} from '@/components/ui/table';
+import { Button } from '@/components/common/Button';
+import { Checkbox } from '@/components/ui/checkbox';
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationLink,
-} from "@/components/ui/pagination";
+} from '@/components/ui/pagination';
 
 const data = Array(8).fill({
   id: 250,
-  category: "공지사항",
-  title: "루시드 eXpert 약관개정 안내",
-  date: "2023.04.01",
+  category: '공지사항',
+  title: '루시드 eXpert 약관개정 안내',
+  date: '2023.04.01',
 });
 
 export default function Dashboard() {
@@ -39,11 +39,21 @@ export default function Dashboard() {
       <div className="flex justify-between items-center mb-4">
         <span className="text-lg font-semibold">전체: 333</span>
         <div className="flex gap-2">
-          <Button variant="outline" className="text-blue-500 border-blue-500">
-            글쓰기
+          {/* 버튼 예시 */}
+          <Button variant="primary" size="lg">
+            primary
           </Button>
-          <Button variant="outline" className="text-red-500 border-red-500">
-            삭제하기
+          <Button variant="secondary">secondary</Button>
+          <Button variant="outline">outline</Button>
+          <Button variant="danger" size="lg">
+            danger
+          </Button>
+          <Button variant="ghost">ghost</Button>
+          <Button variant="outline" size="sm">
+            ✏️ 글쓰기
+          </Button>
+          <Button variant="outline" size="sm">
+            ❌ 삭제하기
           </Button>
         </div>
       </div>
@@ -84,7 +94,7 @@ export default function Dashboard() {
                 </Button>
               </TableCell>
               <TableCell>
-                <Button size="sm" variant="destructive">
+                <Button size="sm" variant="secondary">
                   삭제
                 </Button>
               </TableCell>
