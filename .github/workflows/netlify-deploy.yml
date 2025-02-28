@@ -19,15 +19,15 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: npm install  # 또는 yarn install
+        run: npm install # 또는 yarn install
 
       - name: Build Project
-        run: npm run build  # Netlify에 맞는 build 명령어
+        run: npm run build # Netlify에 맞는 build 명령어
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: './build'  # Netlify 배포 폴더 경로 (React는 build, Vue는 dist)
+          publish-dir: './build' # Netlify 배포 폴더 경로 (React는 build, Vue는 dist)
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}

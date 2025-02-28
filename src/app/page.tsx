@@ -1,8 +1,8 @@
-import Loading from "@/components/common/Loading";
-import Dashboard from "@/app/dashboard/page";
-import { Suspense } from "react";
+import Loading from '@/components/common/Loading';
+import Dashboard from '@/app/dashboard/page';
+import { Suspense } from 'react';
 
-export default function Home() {
+const Home = () => {
   return (
     <main>
       <Suspense fallback={<Loading />}>
@@ -10,4 +10,5 @@ export default function Home() {
       </Suspense>
     </main>
   );
-}
+};
+export default Home;

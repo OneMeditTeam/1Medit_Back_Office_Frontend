@@ -25,18 +25,18 @@ const data = Array(8).fill({
   date: '2023.04.01',
 });
 
-export default function Dashboard() {
+const Dashboard = () => {
   const [selectedRows, setSelectedRows] = useState<number[]>([]);
   const toggleRow = (id: number) => {
     setSelectedRows((prev) =>
-      prev.includes(id) ? prev.filter((row) => row !== id) : [...prev, id]
+      prev.includes(id) ? prev.filter((row) => row !== id) : [...prev, id],
     );
   };
 
   return (
     <div className="p-6">
       {/* 테이블 상단 */}
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex items-center justify-between mb-4">
         <span className="text-lg font-semibold">전체: 333</span>
         <div className="flex gap-2">
           {/* 버튼 예시 */}
@@ -74,8 +74,8 @@ export default function Dashboard() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data.map((item, index) => (
-            <TableRow key={index}>
+          {data.map((item) => (
+            <TableRow key={item.id}>
               <TableCell>
                 <Checkbox
                   onCheckedChange={() => toggleRow(item.id)}
@@ -104,7 +104,7 @@ export default function Dashboard() {
       </Table>
 
       {/* 페이지네이션 */}
-      <Pagination className="mt-4 flex justify-center">
+      <Pagination className="flex justify-center mt-4">
         <PaginationContent>
           <PaginationItem>
             <PaginationLink href="#" isActive>
@@ -127,4 +127,6 @@ export default function Dashboard() {
       </Pagination>
     </div>
   );
-}
+};
+
+export default Dashboard;
