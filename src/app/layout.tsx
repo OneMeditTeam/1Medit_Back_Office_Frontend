@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Nanum_Gothic } from 'next/font/google';
 import './globals.css';
 import LeftNavigationBar from '@/components/common/LeftNavigationBar';
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
 
 const nanumGothic = Nanum_Gothic({
   weight: ['400', '700'],
@@ -24,8 +26,13 @@ const RootLayout = ({
       <body className={`${nanumGothic.variable} antialiased font-nanum`}>
         <div className="flex h-screen">
           <LeftNavigationBar />
-          <div className="flex-1 h-screen p-6 shadow-lg rounded-xl">
-            {children}
+          {/* 오른쪽 컨텐츠 영역 */}
+          <div className="flex flex-col flex-1">
+            <Header />
+            <main className="flex-1 overflow-auto shadow-lg">
+              {children}
+              <Footer />
+            </main>
           </div>
         </div>
       </body>

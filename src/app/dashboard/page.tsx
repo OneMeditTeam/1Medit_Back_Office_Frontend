@@ -32,7 +32,10 @@ const Dashboard = () => {
       prev.includes(id) ? prev.filter((row) => row !== id) : [...prev, id],
     );
   };
-
+  const modifiedData = data.map((item, index) => ({
+    ...item,
+    id: index + 1, // id 값을 1부터 증가
+  }));
   return (
     <div className="p-6">
       {/* 테이블 상단 */}
@@ -74,7 +77,7 @@ const Dashboard = () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data.map((item) => (
+          {modifiedData.map((item) => (
             <TableRow key={item.id}>
               <TableCell>
                 <Checkbox
