@@ -29,10 +29,14 @@ const RootLayout = ({
           {/* 오른쪽 컨텐츠 영역 */}
           <div className="flex flex-col flex-1">
             <Header />
-            <main className="flex-1 overflow-auto shadow-lg">
-              {children}
-              <Footer />
-            </main>
+            <div className="flex-1 overflow-auto">
+              <div className="min-h-full flex flex-col">
+                <main className="flex-grow flex-shrink-0 shadow-lg">
+                  {children}
+                </main>
+                <Footer />
+              </div>
+            </div>
           </div>
         </div>
       </body>
