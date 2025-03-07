@@ -31,7 +31,7 @@ const RootLayout = ({
             <Header />
             <div className="flex-1 overflow-auto">
               <div className="min-h-full flex flex-col">
-                <main className="flex-grow flex-shrink-0 shadow-lg">
+                <main className="flex-grow flex-shrink-0 shadow-lg px-[140px]">
                   {children}
                 </main>
                 <Footer />
