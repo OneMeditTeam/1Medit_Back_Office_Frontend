@@ -8,7 +8,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
+} from '@/components/common/Table';
 import { Button } from '@/components/common/Button';
 import { Checkbox } from '@/components/ui/checkbox';
 import {
@@ -18,6 +18,7 @@ import {
   PaginationLink,
 } from '@/components/ui/pagination';
 import { Input } from '@/components/common/Input';
+import { Paperclip } from 'lucide-react';
 
 const data = Array(8).fill({
   id: 250,
@@ -82,7 +83,7 @@ const Dashboard = () => {
       </div>
       {/* 테이블 상단 */}
       <div className="flex items-center justify-between mb-4">
-        <span className="text-lg font-semibold">전체: 333</span>
+        <span className="text-base font-medium text-[#666D74]">전체:333</span>
         <div className="flex gap-2">
           {/* 버튼 예시 */}
           <Button variant="primary" size="lg">
@@ -105,12 +106,21 @@ const Dashboard = () => {
 
       {/* 테이블 */}
       <Table>
+        <colgroup>
+          <col width="5%" />
+          <col width="5%" />
+          <col width="15%" />
+          <col width="55%" />
+          <col width="10%" />
+          <col width="5%" />
+          <col width="5%" />
+        </colgroup>
         <TableHeader>
-          <TableRow className="bg-gray-200 dark:bg-gray-800">
+          <TableRow>
             <TableHead>
               <Checkbox />
             </TableHead>
-            <TableHead>번호</TableHead>
+            <TableHead className="min-w-16">번호</TableHead>
             <TableHead>게시판분류</TableHead>
             <TableHead>제목</TableHead>
             <TableHead>작성일</TableHead>
@@ -129,8 +139,9 @@ const Dashboard = () => {
               </TableCell>
               <TableCell>{item.id}</TableCell>
               <TableCell>{item.category}</TableCell>
-              <TableCell className="text-blue-400 cursor-pointer hover:underline">
-                {item.title}
+              <TableCell className="cursor-pointer hover:underline text-left">
+                <Paperclip size={18} color="#9FA5AD" className="inline mr-2" />
+                <span>{item.title}</span>
               </TableCell>
               <TableCell>{item.date}</TableCell>
               <TableCell>
