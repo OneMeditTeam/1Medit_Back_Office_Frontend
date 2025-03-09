@@ -19,6 +19,10 @@ const buttonVariants = cva(
           'bg-[#E2E9F2] hover:bg-[#E2E9F2]/90 hover:text-neutral-900 dark:hover:bg-neutral-900 dark:hover:text-neutral-50/90',
         danger:
           'bg-[#B00020] text-white hover:bg-[#B00020]/90 dark:bg-neutral-50 dark:text-neutral-900 dark:hover:bg-neutral-50/90',
+        pageActive:
+          'bg-[#F1F9FF] text-[#1D2022] hover:bg-[#F1F9FF]/90 w-8 h-8 rounded-full p-5 gap-2.5 font-normal text-base leading-[22px] tracking-[-0.6px] text-center font-spoqa',
+        pageDefault:
+          'bg-white text-[#8E959D] dark:border-neutral-800 dark:bg-neutral-950 w-8 h-8 rounded-full p-5 gap-2.5 font-normal text-base leading-[22px] tracking-[-0.6px] text-center font-spoqa',
       },
       size: {
         default: 'h-10 px-4 py-2',
