@@ -17,6 +17,7 @@ import {
   PaginationItem,
   PaginationLink,
 } from '@/components/ui/pagination';
+import { Input } from '@/components/common/Input';
 
 const data = Array(8).fill({
   id: 250,
@@ -38,6 +39,47 @@ const Dashboard = () => {
   }));
   return (
     <div className="p-6">
+      {/* 인풋 예시 */}
+      <div className="mb-8 p-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="space-y-2">
+            <Input inputWidth="w221" placeholder="w221" />
+          </div>
+
+          <div className="space-y-2">
+            <Input inputWidth="w190" placeholder="w190" type="password" />
+          </div>
+
+          <div className="space-y-2">
+            <Input inputWidth="w167" defaultValue="w167" />
+          </div>
+
+          <div className="space-y-2">
+            <Input inputWidth="w167" defaultValue="readonly" readOnly />
+          </div>
+
+          <div className="space-y-2">
+            <Input inputWidth="w234" type="email" placeholder="w234" />
+          </div>
+
+          <div className="space-y-2">
+            <Input inputWidth="w358" type="email" placeholder="w358" />
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <Input inputWidth="w190" type="number" placeholder="w190" />
+            </div>
+          </div>
+
+          <div className="space-y-2 col-span-2">
+            <Input inputWidth="w598" placeholder="w598" />
+          </div>
+          <div className="space-y-2 col-span-3">
+            <Input inputWidth="w1130" placeholder="w1130" />
+          </div>
+        </div>
+      </div>
       {/* 테이블 상단 */}
       <div className="flex items-center justify-between mb-4">
         <span className="text-lg font-semibold">전체: 333</span>
