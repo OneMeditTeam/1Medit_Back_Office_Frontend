@@ -14,9 +14,13 @@ import { Checkbox } from '@/components/ui/checkbox';
 import {
   Pagination,
   PaginationContent,
+  PaginationFirst,
   PaginationItem,
+  PaginationLast,
   PaginationLink,
-} from '@/components/ui/pagination';
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/common/Pagination';
 import { Input } from '@/components/common/Input';
 import { Paperclip } from 'lucide-react';
 
@@ -163,6 +167,12 @@ const Dashboard = () => {
       <Pagination className="flex justify-center mt-4">
         <PaginationContent>
           <PaginationItem>
+            <PaginationFirst href="#" />
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationPrevious href="#" />
+          </PaginationItem>
+          <PaginationItem>
             <PaginationLink href="#" isActive>
               1
             </PaginationLink>
@@ -178,6 +188,12 @@ const Dashboard = () => {
           </PaginationItem>
           <PaginationItem>
             <PaginationLink href="#">5</PaginationLink>
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationNext href="#" />
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationLast href="#" />
           </PaginationItem>
         </PaginationContent>
       </Pagination>
